@@ -135,9 +135,10 @@ def feature_plot(importances, X_train, y_train):
           label = "Cumulative Feature Weight")
     pl.xticks(np.arange(5), columns)
     pl.xlim((-0.5, 4.5))
+    pl.ylim((0, 1))
     pl.ylabel("Weight", fontsize = 12)
     pl.xlabel("Feature", fontsize = 12)
     
-    pl.legend(loc = 'upper center')
+    pl.legend(loc = 'upper left')
     pl.tight_layout()
     pl.show()  
