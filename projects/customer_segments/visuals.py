@@ -107,14 +107,14 @@ def biplot(good_data, reduced_data, pca):
     feature_vectors = pca.components_.T
 
     # we use scaling factors to make the arrows easier to see
-    arrow_size, text_pos = 7.0, 8.0,
+    arrow_size, text_pos = 7.0, 7.5,
 
     # projections of the original features
     for i, v in enumerate(feature_vectors):
         ax.arrow(0, 0, arrow_size*v[0], arrow_size*v[1], 
                   head_width=0.2, head_length=0.2, linewidth=2, color='red')
         ax.text(v[0]*text_pos, v[1]*text_pos, good_data.columns[i], color='black', 
-                 ha='center', va='center', fontsize=18)
+                 ha='left', va='bottom', fontsize=14)
 
     ax.set_xlabel("Dimension 1", fontsize=14)
     ax.set_ylabel("Dimension 2", fontsize=14)
