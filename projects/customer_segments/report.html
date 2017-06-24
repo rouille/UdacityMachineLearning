@@ -12008,7 +12008,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12126,9 +12126,9 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> I have selected the following customers:</p>
 <ul>
-<li>index number 35. The total purchase cost of the <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code> product categories is high. Indeed, the annual spending amount for <code>'Milk'</code> is between the median (Q2) and the upper quartile (Q3) while it is above Q3 for both <code>'Grocery'</code> and <code>'Detergents_Paper'</code>. On the other hand, the total purchase cost of the <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> is low. This time, the annual spending amount is below the first quartile (Q1) for <code>'Fresh'</code> and <code>'Frozen'</code> and is slightly above Q1 for <code>'Delicatessen'</code>. I would say that this establishment is a retail store.</li>
+<li>index number 35. The total purchase cost of the <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code> product categories is high. The annual spending amount for <code>'Milk'</code> is between the median (Q2) and the upper quartile (Q3) while it is above Q3 for both <code>'Grocery'</code> and <code>'Detergents_Paper'</code>. On the other hand, the total purchase cost of the <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> is low. This time, the annual spending amount is below the first quartile (Q1) for <code>'Fresh'</code> and <code>'Frozen'</code> and is slightly above Q1 for <code>'Delicatessen'</code>. I would say that this establishment is a retail store.</li>
 <li>index number 120. This is the opposite behavior here. The total purchase cost of the <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code> product categories is low (below Q1 for <code>'Milk'</code> and <code>'Detergents_Paper'</code> and between Q1 and Q2 for <code>'Grocery'</code>). Contrairwise, the annual spending amount is above Q3 for <code>'Fresh'</code> and between Q2 and Q3 for <code>'Frozen'</code> and <code>'Delicatessen'</code>. I would say that this establishment is either a cafe or a restaurant.</li>
-<li>index number 401. I believe that this establishment is a cafe or restaurant. The total purchase cost of each category behaves in the same than the second customer (index number 120), i.e, annual spending amount is high for <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> and low for <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code>.</li>
+<li>index number 401. I believe that this establishment is a cafe or restaurant. The total purchase cost of each category behaves in the same way than the second customer (index number 120), i.e, annual spending amount is high for <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> and low for <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code>.</li>
 </ul>
 
 </div>
@@ -12156,7 +12156,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -12205,7 +12205,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h3><p><em>Which feature did you attempt to predict? What was the reported prediction score? Is this feature is necessary for identifying customers' spending habits?</em><br>
-<strong>Hint:</strong> The coefficient of determination, <code>R^2</code>, is scored between 0 and 1, with 1 being a perfect fit. A negative <code>R^2</code> implies the model fails to fit the data.</p>
+<strong>Hint:</strong> The coefficient of determination, R$^2$, is scored between 0 and 1, with 1 being a perfect fit. A negative R$^2$ implies the model fails to fit the data.</p>
 
 </div>
 </div>
@@ -12215,7 +12215,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> We have used the feature <code>Frozen</code> as target label and have calculated the coefficient of determination, <code>R^2</code>, to measure the performance of the model. The prediction score is -0.81. Note that a model with a negative <code>R^2</code> is arbitrarily worse than one that always predicts the mean of the target variable. Therefore, the above model fails to fit the data. The <code>Frozen</code> feature cannot be predicted from the five other product categories and, for this reason, it is a necessary feature for understanding customer purchasing.</p>
+<p><strong>Answer:</strong> We have used the <code>'Frozen'</code> feature as target label and calculated the coefficient of determination, R$^2$, to measure the performance of the model. The prediction score is negative: R$^2$ = -0.81. The model, thereby, is arbitrarily worse than one that always predicts the mean of the target variable, i.e., it fails to fit the data. The <code>'Frozen'</code> feature cannot be predicted well from the other features in the dataset and, therefore, it may contain useful information for understanding customer purchasing that are not contained in the other features.</p>
 
 </div>
 </div>
@@ -12232,7 +12232,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -14707,9 +14707,131 @@ MBgMBoPBYDAYDCvk/wdgSyXSN/VzsgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> From the above scatter matrix plot, we can see that the <code>Milk</code> feature is correlated with the <code>Grocery</code> and <code>Detergents_Paper</code> features. It follows that the <code>Grocery</code> feature is also correlated with the <code>Detergents_Paper</code> feature.</p>
-<p>The <code>Frozen</code> feature that is considered as target in the decision tree regressor model does not exhibit any degree of correlation with the other features. This confirm that this feature is necessary for identifying customers' spending habits. Likewise, I have tried to use the <code>Milk</code>, <code>Grocery</code> and <code>Detergents_Paper</code> as target label in the model. In that event, the three reported <code>R^2</code> are positive: 0.12, 0.73 and 0.57 for <code>Milk</code>, <code>Grocery</code> and <code>Detergents_Paper</code>, respectively. This shows that the above model is able to predict the variance of these target labels.</p>
-<p>The data for the six features are right-skewed distributed. The distributions have a long tail in the positive direction on the number line. For each feature, most of the points lie in the bulk of the distribution. The peak of the distribution is the mode and has a different value than the median and the mean. In fact, for a right-skewed distribution the median has a larger value than the mode and a lower value than the mean. This is confirmed by the table giving the statistical description of the dataset which shows that the median value is lower than the mean value for each feature.</p>
+<p><strong>Answer:</strong> The scatter plots show a clear correlation between<code>'Grocery'</code> and <code>'Detergents_Paper'</code>. One can see that <code>'Milk'</code> is also correlated to both these features, but the correlation is relatively mild. The table below gives the correlation coefficients for all feature pairs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fresh</th>
+      <td>1.000000</td>
+      <td>0.100510</td>
+      <td>-0.011854</td>
+      <td>0.345881</td>
+      <td>-0.101953</td>
+      <td>0.244690</td>
+    </tr>
+    <tr>
+      <th>Milk</th>
+      <td>0.100510</td>
+      <td>1.000000</td>
+      <td>0.728335</td>
+      <td>0.123994</td>
+      <td>0.661816</td>
+      <td>0.406368</td>
+    </tr>
+    <tr>
+      <th>Grocery</th>
+      <td>-0.011854</td>
+      <td>0.728335</td>
+      <td>1.000000</td>
+      <td>-0.040193</td>
+      <td>0.924641</td>
+      <td>0.205497</td>
+    </tr>
+    <tr>
+      <th>Frozen</th>
+      <td>0.345881</td>
+      <td>0.123994</td>
+      <td>-0.040193</td>
+      <td>1.000000</td>
+      <td>-0.131525</td>
+      <td>0.390947</td>
+    </tr>
+    <tr>
+      <th>Detergents_Paper</th>
+      <td>-0.101953</td>
+      <td>0.661816</td>
+      <td>0.924641</td>
+      <td>-0.131525</td>
+      <td>1.000000</td>
+      <td>0.069291</td>
+    </tr>
+    <tr>
+      <th>Delicatessen</th>
+      <td>0.244690</td>
+      <td>0.406368</td>
+      <td>0.205497</td>
+      <td>0.390947</td>
+      <td>0.069291</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that the <code>'Frozen'</code> feature, considered as target label in the decision tree regressor model, is weakly correlated to the other features. This confirm that this feature is necessary for identifying customers' spending habits. Likewise, I have tried to use the <code>'Grocery'</code> feature as target label in the model. In that event, the reported R$^2$ is positive: 0.73. The <code>'Grocery'</code> can be predicted by the other features in the dataset (correlation).</p>
+<p>The data for the six features are right-skewed distributed, i.e., the distributions have a long tail in the positive direction on the number line. Right-skewed distributions have median value larger than the mode value and a lower than the mean value. This is confirmed by the table giving the statistical description of the dataset which shows that the median value is lower than the mean value for each feature. Clustering algorithms work under the assumption that the data features are roughly normally distributed. The significant deviation from zero skewness indicates that we must apply some kind of normalisation to make the features normally distributed.</p>
 
 </div>
 </div>
@@ -14741,14 +14863,14 @@ MBgMBoPBYDAYDCvk/wdgSyXSN/VzsgAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
-<span class="n">log_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">log_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="c1"># TODO: Scale the sample data using the natural logarithm</span>
-<span class="n">log_samples</span> <span class="o">=</span> <span class="n">samples</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">log_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
 
 <span class="c1"># Produce a scatter matrix for each pair of newly-transformed features</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">log_data</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">14</span><span class="p">),</span> <span class="n">diagonal</span> <span class="o">=</span> <span class="s1">&#39;kde&#39;</span><span class="p">);</span>
@@ -20292,7 +20414,7 @@ eQ5uAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -20398,7 +20520,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">AllOutliers</span> <span class="o">=</span> <span class="p">[]</span>
@@ -21290,7 +21412,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I have decided to exclude these 5 samples from the dataset. The fact that these data points are outliers for at least two features could indicate an error in data transmission or transcription. It is worth noting that some machine learning algorithm are sensitive to outliers. For instance, a boosting model, such as AdaBoost, would most likely focus on these data points and hence overfit the data.</p>
+<p>The fact that these data points are outliers for at least two features could possibly indicate an error in data transmission or transcription. Clustering algorithms use distance averaging as metric to form clusters and therefore, outliers could have a huge impact on the clustering mechanism. For this reason, I have decided to exclude these 5 samples from the dataset.</p>
 
 </div>
 </div>
@@ -21322,7 +21444,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
@@ -21682,10 +21804,10 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> The first and second principal component explained 70.68% of the variance while 93.11% of the variance is explained when considering the first four principal component.</p>
 <ul>
-<li>The first principal component (dimension 1) is the direction where most of the variance is observed in the dataset. Dimension 1 increases with decreasing <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code>. Besides, the three features vary together, i.e., when one increases/decreases, the other two increase/decrease. Note that this effect was already seen on the scatter matrix plot (Question 3) when we discussed the corrlation between pairs of features.</li>
-<li>The second principal component (dimension 2) strongly correlates with the <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> features. When these features decrease, dimension 2 increases. Once again, all three features vary together. </li>
-<li>The third principal component (dimension 3) increases with decreasing <code>'Fresh'</code> (negative weights) and increasing <code>'Delicatessen'</code> (positive weights). In other words the direction of variance is, here, in the direction in which <code>'Fresh'</code> increases and <code>'Delicatessen'</code> decreases.</li>
-<li>The fourth principal component (dimension 4) points towards the direction in which <code>'Frozen'</code> increases and <code>'Delicatessen'</code> decreases.</li>
+<li>The first principal component (dimension 1) is the direction where most of the variance is observed in the dataset. Dimension 1 increases with decreasing <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code>. Besides, the three features vary together, i.e., when one increases/decreases, the other two increase/decrease. Note that this effect was already seen on the scatter matrix plot (Question 3) when we discussed the corrlation between pairs of features. Dimension 1 would likely separate out the retailers from the other types of customers.</li>
+<li>The second principal component (Dimension 2) strongly correlates with the <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> features. When these features decrease, Dimension 2 increases. Once again, all three features vary together. Dimension 2 could help identified the restaurants.</li>
+<li>The third principal component (Dimension 3) increases with decreasing <code>'Fresh'</code> (negative weights) and increasing <code>'Delicatessen'</code> (positive weights). In other words the direction of variance is, here, in the direction in which <code>'Fresh'</code> increases and <code>'Delicatessen'</code> decreases.</li>
+<li>The fourth principal component (Dimension 4) points towards the direction in which <code>'Frozen'</code> increases and <code>'Delicatessen'</code> decreases.</li>
 </ul>
 
 </div>
@@ -21703,7 +21825,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -21806,7 +21928,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -21840,7 +21962,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -21922,7 +22044,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -21938,12 +22060,12 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1147f9f10&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x10515a350&gt;</pre>
 </div>
 
 </div>
@@ -23042,7 +23164,7 @@ EyMiIiIiIvJ7/w+Oh/sqCPsDNQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GaussianMixture</span>
@@ -23118,7 +23240,7 @@ EyMiIiIiIvJ7/w+Oh/sqCPsDNQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -23783,7 +23905,7 @@ w1UmTCHxAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -23884,7 +24006,7 @@ w1UmTCHxAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Let's start with <code>'Segment 0'</code>. The features that are strongly correlated to dimension 2, i.e., <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code>, have values around the median while the three other product categories, <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code>, which are weakly correlated to dimention 2, have values around Q1. I would say that <code>'Segment 0'</code> represents cafes/restaurants. The total purchase cost of the product categories behave in the opposite way for <code>'Segment 1'</code>. The <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code> values are around Q3 while <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> are between Q1 and Q2. <code>'Segment 1'</code> should represent retail stores.</p>
+<p><strong>Answer:</strong> Let's start with <code>'Segment 0'</code>. The features that are strongly correlated to Dimension 2 (<code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code>) have values around the median while the three other product categories, <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code>, which are weakly correlated to Dimention 2, have values around Q1. I would say that <code>'Segment 0'</code> represents cafes/restaurants. The total purchase cost of the product categories behave in the opposite way for <code>'Segment 1'</code>. The <code>'Milk'</code>, <code>'Grocery'</code> and <code>'Detergents_Paper'</code> values are around Q3 while <code>'Fresh'</code>, <code>'Frozen'</code> and <code>'Delicatessen'</code> are between Q1 and Q2. <code>'Segment 1'</code> should represent retail stores.</p>
 <p>In summary, I believe that customers belonging to <code>'Cluster 0'</code> (<code>'Cluster 1'</code>) centered on <code>'Segment 0'</code> (<code>'Segment 1'</code>) are cafes/restaurants (retail stores)</p>
 
 </div>
@@ -23903,7 +24025,7 @@ w1UmTCHxAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -23940,14 +24062,14 @@ Sample point 2 predicted to be in Cluster 0
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> I would say that <code>'Segment 0'</code> (<code>'Segment 1'</code>) best represents sample points 1 and 2 (sample point 0). I discussed in <strong>Question 1</strong> the kind of establishment that each of the three samples could represent. I said that sample 0 could be a retail store and sample point 1 and 2 could be a restaurant.</p>
-<p>This is consitent with the predictions made, i.e., sample point 0 belongs to <code>'Cluster 1'</code> and sample points 1 and 2 belong to <code>'Cluster 0'</code>. This is confirmed by the calculation below where I compute the euclidean distance of each sample point to the cluster means. One can sees that sample point 0 is closer to cluster mean 1 (<code>'Segment 1'</code>) while sample points 1 and 2 are closer to cluster mean 0 (<code>'Segment 0'</code>).</p>
+<p>This is consitent with the predictions made, i.e., sample point 0 belongs to <code>'Cluster 1'</code> and sample points 1 and 2 belong to <code>'Cluster 0'</code> and further confirmed by the calculation below where I compute the euclidean distance of each sample point to the cluster means. One can sees that sample point 0 is closer to cluster mean 1 (<code>'Segment 1'</code>) while sample points 1 and 2 are closer to cluster mean 0 (<code>'Segment 0'</code>).</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Distance of samples to cluster centers</span>
@@ -24021,7 +24143,14 @@ distance of sample points to Segment 1:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> I would say that the establishments that would be affected the most by a change in the delivery service woul be restaurants and cafes. These customers use fresh goods in their business and usually do not have an important stock. For this reason, I would change the delivery service for customers belonging to <code>'Segment 1'</code>, i.e., retail stores.</p>
+<p><strong>Answer:</strong> Two customer segments have been identified using the total purchase cost of each product category as features. We believe that <code>'Segment 0'</code> represents restaurants and <code>'Segment 1'</code> retailers. These two kind of establishments will obviously be affected differently by a change in the delivery service.</p>
+<p>To determine how customers would react to the change in delivery service, the wholesale distributor needs to run an A/B tests on each customer segment. The experiment could be run as follows:</p>
+<ul>
+<li>Consider two samples in each customer segment. Each sample needs to be large enough to get statistically significant results.</li>
+<li>Set a 3 day a week delivery service for customers in one of the sample (experiment group: A). Customers in the other sample still have a 5 day a week delivery service (control group: B). The experiment and control groups are highly similar since they enclosed customers from the same segment.</li>
+<li>After few months, the whole sale distributor asks the customers in each sample what they think of the delivery service (satisfied/unsatisfied) and assess, for each customer segment, the success of the new delivery schedule. </li>
+<li>If the delivery schedule is successful for one customer segment, the wholesale distributor can roll it out for that part of the customers and if it is successful on both, it can be rolled out universally.</li>
+</ul>
 
 </div>
 </div>
@@ -24061,7 +24190,7 @@ distance of sample points to Segment 1:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
