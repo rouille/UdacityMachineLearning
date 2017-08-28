@@ -295,7 +295,7 @@ class Simulator(object):
             a = self.env.primary_agent
             print "Simulating trial. . . "
             if a.learning:
-                print "epsilon = {:.4f}; alpha = {:.4f}".format(a.epsilon, a.alpha)
+                print "epsilon = {:.8f}; alpha = {:.4f}".format(a.epsilon, a.alpha)
             else:
                 print "Agent not set to learn."
 
@@ -432,7 +432,7 @@ class Simulator(object):
 
                 if self.env.primary_agent.learning:
                     self.font = self.pygame.font.Font(None, 22)
-                    self.screen.blit(self.font.render("epsilon = {:.4f}".format(self.env.primary_agent.epsilon), True, self.colors['black'], self.bg_color), (10, 80))
+                    self.screen.blit(self.font.render("epsilon = {:.8f}".format(self.env.primary_agent.epsilon), True, self.colors['black'], self.bg_color), (10, 80))
                     self.screen.blit(self.font.render("alpha = {:.4f}".format(self.env.primary_agent.alpha), True, self.colors['black'], self.bg_color), (10, 95))
 
         # Reset status text
